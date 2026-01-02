@@ -1,0 +1,104 @@
+import React, { useEffect, useState } from "react";
+import methodModel from "../../../methods/methods";
+import Html from "./html";
+
+const MultiSelectDropdown = ({
+  intialValue,
+  placeholder='Select',
+  options,
+  result,
+  displayValue = "name",
+  className='select',
+  disabled=false,
+  required=false,
+  isObject=false,
+  id,
+}) => {
+  const [selectedValues, setSelectedValues] = useState([]);
+
+  const handleChange = (e) => {
+    let isAll = e.find(function (option) {
+      return option.value === "all";
+    });
+    if (isAll) {
+      let value = [];
+     
+
+      if(isObject){
+        value = options;
+      }else{
+        value = options?.map((itm) => {
+          return itm.id;
+        });
+      }
+
+      result({ event: "value", value: value });
+    } else {
+      let value = [];
+     
+
+      if(isObject){
+        value = e.map((itm) => {
+          return methodModel.find(options, itm.value, "id");
+        });
+      }else{
+        value = e.map((itm) => {
+          return itm.value;
+        });
+      }
+
+      result({ event: "value", value: value });
+    }
+    // let value = [];
+    // value = e.map((itm) => {
+    //   return itm.value;
+    // });
+    // result({ event: "value", value: value });
+  };
+
+  useEffect(() => {
+    let value = [];
+    if (intialValue?.length && options?.length) {
+     
+
+      if(isObject){
+        value = intialValue?.map((itm) => {
+          return {
+            ...itm,
+            value: itm.id || "",
+            label:itm?.[displayValue] || "Not Exist"
+          };
+        });
+      }else{
+        value = intialValue?.map((itm) => {
+          return {
+            ...methodModel.find(options, itm, "id"),
+            value: methodModel.find(options, itm, "id")?.id || "",
+            label:
+              methodModel.find(options, itm, "id")?.[displayValue] || "Not Exist",
+          };
+        });
+      }
+    }
+    setSelectedValues(value);
+  }, [intialValue, options]);
+
+  return (
+    <>
+      <Html
+      className={className}
+      required={required}
+      isObject={isObject}
+        id={id}
+        disabled={disabled}
+        displayValue={displayValue}
+        placeholder={placeholder}
+        options={options}
+        selectedValues={selectedValues}
+        handleChange={handleChange}
+      />
+    </>
+  );
+};
+
+export default MultiSelectDropdown;

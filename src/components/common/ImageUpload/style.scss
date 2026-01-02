@@ -1,0 +1,23 @@
+.imagethumbWrapper{
+
+    position: relative;
+    display: inline-block;
+    .fa-times{
+           position: absolute;
+    right: -9px;
+    line-height: 20px;
+    text-align: center;
+    width: 20px;
+    top: -9px;
+    cursor: pointer;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 89, 89, 0.431372549);
+    object-fit: contain;
+    color: #4a4a4a;
+    }
+    img{
+        width: 100px;
+        border-radius:3px; 
+    }
+}
