@@ -4,7 +4,7 @@ import PageLayout from "../../components/global/PageLayout";
 export default function AboutUs() {
     return (
         <PageLayout>
-            <section className="max-w-5xl mx-auto py-20 px-6 lg:px-32 text-white bg-gradient-to-br from-blue-700 to-purple-800 rounded-3xl shadow-lg">
+            <section className="max-w-5xl mx-auto py-20 px-6 lg:px-32 text-white bg-gradient-to-br from-blue-700 to-purple-800 shadow-lg">
                 <h1 className="text-5xl font-extrabold mb-8">About Us</h1>
                 <p className="text-lg leading-relaxed mb-6">
                     Welcome to CalcPro, your trusted partner in professional calculations.

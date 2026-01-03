@@ -4,7 +4,7 @@ import PageLayout from "../../components/global/PageLayout";
 export default function ContactUs() {
     return (
         <PageLayout>
-            <section className="max-w-3xl mx-auto py-20 px-6 lg:px-32 text-white bg-gradient-to-br from-blue-700 to-purple-800 rounded-3xl shadow-lg">
+            <section className="max-w-3xl mx-auto py-20 px-6 lg:px-32 text-white bg-gradient-to-br from-blue-700 to-purple-800 shadow-lg">
                 <h1 className="text-5xl font-extrabold mb-8">Contact Us</h1>
                 <form className="flex flex-col gap-6">
                     <input

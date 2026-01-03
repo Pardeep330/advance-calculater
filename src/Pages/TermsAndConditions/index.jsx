@@ -4,7 +4,7 @@ import PageLayout from "../../components/global/PageLayout";
 export default function TermsAndConditions() {
     return (
         <PageLayout>
-            <section className="max-w-5xl mx-auto py-20 px-6 lg:px-32 text-white bg-gradient-to-br from-blue-700 to-purple-800 rounded-3xl shadow-lg">
+            <section className="max-w-5xl mx-auto py-20 px-6 lg:px-32 text-white bg-gradient-to-br from-blue-700 to-purple-800 shadow-lg">
                 <h1 className="text-5xl font-extrabold mb-8">Terms & Conditions</h1>
                 <p className="mb-6 text-lg leading-relaxed">
                     Please read these terms and conditions carefully before using CalcPro.

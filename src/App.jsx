@@ -28,6 +28,10 @@ function App() {
     { url: "/plans", path: "Plans" },
     { url: "/privacy", path: "PrivacyPolicy" },
     { url: "/terms", path: "TermsAndConditions" },
+    { url: "/dashboard", path: "Dashboard" },
+    { url: "/profile", path: "Profile" },
+    { url: "/edit/profile", path: "EditProfile" },
+    { url: "/calculater", path: "Calculater" },
     { url: "/", element: <Navigate to="/" /> },
   ];
 

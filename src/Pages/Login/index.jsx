@@ -19,7 +19,7 @@ export default function Login() {
             <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
 
                 <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 mb-4">
+                    <div onClick={e=>navigate("/")} className="cursor-pointer inline-flex items-center justify-center w-16 h-16 mb-4">
                         <img src="/favicon-32x32.png" alt="Calculator Logo" className="w-12 h-12" />
                     </div>
                     <h1 className="text-3xl font-bold text-gray-800">

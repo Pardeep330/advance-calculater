@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function OTPPage({ onVerify }) {
+    const navigate=useNavigate()
     const [otp, setOtp] = useState(["", "", "", ""]);
     const [error, setError] = useState("");
     const inputsRef = useRef([]);
@@ -50,7 +52,7 @@ export default function OTPPage({ onVerify }) {
             <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-lg">
                 {/* Logo */}
                 <div className="text-center mb-6">
-                    <div className="inline-flex items-center justify-center w-16 h-16 mb-4">
+                    <div onClick={e=>navigate("/login")} className="cursor-pointer inline-flex items-center justify-center w-16 h-16 mb-4">
                         <img src="/favicon-32x32.png" alt="Calculator Logo" className="w-12 h-12" />
                     </div>
                     <h1 className="text-3xl font-bold text-gray-800 mb-2">Verify OTP</h1>

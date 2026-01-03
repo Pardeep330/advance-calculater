@@ -36,7 +36,7 @@ const plans = [
 export default function Plans() {
     return (
         <PageLayout>
-            <section className="max-w-7xl mx-auto py-20 px-6 lg:px-32 text-white bg-gradient-to-br from-blue-700 to-purple-800 rounded-3xl shadow-lg">
+            <section className="max-w-7xl mx-auto py-20 px-6 lg:px-32 text-white bg-gradient-to-br from-blue-700 to-purple-800 shadow-lg">
                 <h1 className="text-5xl font-extrabold mb-12 text-center">Plans & Pricing</h1>
                 <div className="grid md:grid-cols-3 gap-10">
                     {plans.map((plan, i) => (
